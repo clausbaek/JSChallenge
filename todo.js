@@ -2,6 +2,11 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input")
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_KEY ="todos"
+const toDoArray =[];
+
+
+
 
 function deleteToDo(event) {
 
@@ -15,6 +20,15 @@ function deleteToDo(event) {
     // function summary : remeove li when event was run
 
 }
+function savetoDoArray(){
+    localStorage.setItem(TODOS_KEY,JSON.stringify(toDoArray));
+    //ex) JSON.stringify([1,2,3])  returns "[1,2,3,4]" / couteroperation is parse
+
+    // save todoarray in local storage / in a string / because you can't save arrays in a localstorage
+    // 
+}
+
+
 
 function paintToDo(newtoDo) {
     // console.log(newtoDo) newtoDO = some value in todoInput
@@ -49,8 +63,28 @@ function handletoDoSubmit(event) {
     const newtoDo = toDoInput.value;
     // console.log(toDoInput.value)  some event value
     toDoInput.value = "";
+    toDoArray.push(newtoDo);
+    savetoDoArray();
+
     // console.log(toDoForm.value);  value reset to  = ""
     paintToDo(newtoDo);
 }
 
 toDoForm.addEventListener("submit", handletoDoSubmit);
+
+
+// const savedtodos =localStorage.getItem(TODOS_KEY);
+// function sayItemType(item) {
+//     console.log("This item is ", item)
+
+// }  * if arrow function is not used
+
+if (savedtodos!==null){
+    const parsedtodos =JSON.parse(savedtodos);
+    // parsedtodos.forEach(sayItemType);
+    // foreach element run sayItemType function
+    //  instead use arrow function for short(instead of function) :
+    
+    parsedtodos.foreach(item) => console.log("this item is ", item);
+
+    };
