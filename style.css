@@ -1,0 +1,8 @@
+.hidden{
+    display : none; 
+}
+
+.today{
+    color: rgb(22, 53, 166);
+    font-family: 'Baloo Tammudu', cursive;
+}

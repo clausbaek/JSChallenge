@@ -10,19 +10,35 @@
 </head>
 
 <body>
+    <h2 id="js-clock" class="today"></h2>
 
-    <form action="" id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press ENter" requried>
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <input type="submit" value="Log In" />
     </form>
 
-        <ul id="todo-list">
-        </ul>
+    <h1 class="hidden" id="greeting"></h1>
 
-    <!-- </form> if you end form in here will cause terrible error -->
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
 
+    <ul id="todo-list"></ul>
 
-    <script src ="todo.js"></script>
-
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
