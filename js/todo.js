@@ -23,8 +23,8 @@ function ConvertDate(miliseconds)
 {
 const dateMili= new Date(miliseconds);
 const Years = String(dateMili.getUTCFullYear()).padStart(2, "0");
-const Months = String(dateMili.getUTCMonth()).padStart(2, "0");
-const Dates = String(dateMili.getUTCDate()).padStart(2, "0");
+const Months = String(dateMili.getUTCMonth()+1).padStart(2, "0");
+const Dates = String(dateMili.getDate()).padStart(2, "0");
 const Hours = String(dateMili.getHours()).padStart(2, "0");
 const Minutes = String(dateMili.getMinutes()).padStart(2, "0")
 let dateString =`${Years}-${Months}-${Dates} / ${Hours}:${Minutes}~`;

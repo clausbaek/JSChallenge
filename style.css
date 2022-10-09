@@ -1,29 +1,88 @@
-
-input {
-    display: block;
-    margin: 20px;
-    width: auto;
-  }
-
-.hidden{
-    display : none; 
+body {
+    background-size: cover
 }
 
-.today{
+.hidden {
+    display: none;
+}
+
+.today {
+    padding: 5px;
+
     color: rgb(22, 53, 166);
     font-family: 'Baloo Tammudu', cursive;
+    text-align: center;
+    background-color: aliceblue;
 }
 
 
-#randomfacts
-{
+#randomfacts {
+    margin: 10px;
+    padding: 5px;
     font-family: 'Times New Roman', curive;
-    font-size : 25px;
-    max-width : 750px;
-    color:black;
+    font-size: 25px;
+
+    max-width: 750px;
+    color: black;
+    background-color: aliceblue;
+    border: 5px solid rgb(5, 35, 12);
+    border-radius: 15px;
+
 }
 
-#todo-form input
-{
-    width:220px;
+
+#todo-form {
+    text-align: center;
+}
+
+
+.todos{
+    border: 5px solid rgb(5, 35, 12);
+    border-radius: 15px;
+
+    background-color:aliceblue;
+}
+
+span#todo-list {
+    margin: 20px;
+    text-align: center;
+
+    background-color: aliceblue;
+}
+
+
+
+
+#greeting {
+    margin: 10px;
+    padding : 3px;
+    text-align: center;
+    font-size: 35px;
+    border-radius: 20px;
+    border : 5px solid #d8cbe4;
+    background-color: aliceblue;
+    color: rgb(22, 53, 166)
+
+
+}
+
+#weather {
+
+    margin: 15px;
+
+    padding: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    background-color: aliceblue;
+    border : 10px solid #d8cbe4;
+
+}
+
+input{
+    block-size: 100px;
+    width: 220px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: aliceblue;
 }
