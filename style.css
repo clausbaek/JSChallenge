@@ -1,3 +1,10 @@
+
+input {
+    display: block;
+    margin: 20px;
+    width: auto;
+  }
+
 .hidden{
     display : none; 
 }
@@ -5,4 +12,18 @@
 .today{
     color: rgb(22, 53, 166);
     font-family: 'Baloo Tammudu', cursive;
+}
+
+
+#randomfacts
+{
+    font-family: 'Times New Roman', curive;
+    font-size : 25px;
+    max-width : 750px;
+    color:black;
+}
+
+#todo-form input
+{
+    width:220px;
 }

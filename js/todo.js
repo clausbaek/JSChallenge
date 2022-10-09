@@ -19,6 +19,17 @@ function deleteToDo(event) {
     savetoDoArray();
 }
 
+function ConvertDate(miliseconds)
+{
+const dateMili= new Date(miliseconds);
+const Years = String(dateMili.getUTCFullYear()).padStart(2, "0");
+const Months = String(dateMili.getUTCMonth()).padStart(2, "0");
+const Dates = String(dateMili.getUTCDate()).padStart(2, "0");
+const Hours = String(dateMili.getHours()).padStart(2, "0");
+const Minutes = String(dateMili.getMinutes()).padStart(2, "0")
+let dateString =`${Years}-${Months}-${Dates} / ${Hours}:${Minutes}~`;
+return dateString;
+}
 
 
 function paintToDo(newtodoObject) {
@@ -28,13 +39,24 @@ function paintToDo(newtodoObject) {
     newlitag.id = newtodoObject.id;
 
     const newspan = document.createElement("span");
+    const addSpace =document.createElement("br");
+    const AddInputTime = document.createElement("span");
     const Xbutton = document.createElement("button");
 
+
     newlitag.appendChild(newspan);
+    newlitag.appendChild(addSpace);
+    newlitag.appendChild(AddInputTime);
     newlitag.appendChild(Xbutton);
 
     newspan.innerText = newtodoObject.text;
-    Xbutton.innerText = "Delete"
+
+    const InputDate =ConvertDate(newtodoObject.id);
+
+    AddInputTime.innerText =`Listed at : ${InputDate}`;
+
+    
+    Xbutton.innerText = "Delete Task"
     Xbutton.addEventListener("click", deleteToDo);
 
     toDoList.appendChild(newlitag);
